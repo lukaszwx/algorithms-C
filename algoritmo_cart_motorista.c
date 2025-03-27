@@ -12,7 +12,6 @@ int main(){
 	printf("Voce foi aprovado no exame?\n");
 	scanf("%i",&exame);
 	
-if (aprovado )
 if (idade>=18 && idade<=95 && strcmp(exame,"APROVADO") == 0){
 	printf("Voce pode possuir a carteira de motorista, %s:\n",nome);
 } else{

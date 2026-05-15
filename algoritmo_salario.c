@@ -1,17 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
-float salario;
-char nome[50];
-int main(){
-	printf("Digite seu nome\n");
-	scanf("%s", &nome);
-	printf("Digite o salario\n");
-	scanf("%f",&salario);
-	if (salario>1800 && salario<=8000){
-		printf("Salario valido para financiamento,%s:\n",nome);
-}else{
-	printf("Salario fora da faixa permitida para financiamento\n");
-	
-		
-	}
+
+#define TAM_NOME 50
+#define SALARIO_MINIMO 1800.0
+#define SALARIO_MAXIMO 8000.0
+
+int main(void) {
+    char nome[TAM_NOME];
+    float salario;
+
+    printf("Digite seu nome: ");
+    scanf(" %49[^\n]", nome);
+
+    printf("Digite o salario: ");
+    scanf("%f", &salario);
+
+    if (salario > SALARIO_MINIMO && salario <= SALARIO_MAXIMO) {
+        printf("\n%s, salario valido para financiamento.\n", nome);
+    } else {
+        printf("\n%s, salario fora da faixa permitida para financiamento.\n", nome);
+    }
+
+    return 0;
 }
